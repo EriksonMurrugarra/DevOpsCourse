@@ -1,0 +1,11 @@
+machine:
+  service:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t digitalpark
+
+test:
+  override:
+    - docker run digitalpark npm test
